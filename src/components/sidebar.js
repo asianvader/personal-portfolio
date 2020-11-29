@@ -6,6 +6,7 @@ import {
   faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons"
 import Phoebe from "../images/phoebe.jpg"
+import sidebarStyles from "./sidebar.module.css"
 import "fontsource-roboto"
 import "fontsource-open-sans"
 
