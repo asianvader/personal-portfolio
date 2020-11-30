@@ -25,3 +25,11 @@ button {
   background: none;
   cursor: pointer;
 }
+
+.fontAwesome {
+  color: black;
+}
+
+.fontAwesome:hover {
+  opacity: 0.5;
+}

@@ -11,9 +11,9 @@ import "fontsource-roboto"
 import "fontsource-open-sans"
 
 function Sidebar() {
-  const twitterIcon = <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
-  const githubIcon = <FontAwesomeIcon icon={faGithubSquare} size="3x" />
-  const linkedinIcon = <FontAwesomeIcon icon={faLinkedin} size="3x" />
+  const twitterIcon = <FontAwesomeIcon icon={faTwitterSquare} className={sidebarStyles.fontAwesome} size="3x" />
+  const githubIcon = <FontAwesomeIcon icon={faGithubSquare} className={sidebarStyles.fontAwesome} size="3x" />
+  const linkedinIcon = <FontAwesomeIcon icon={faLinkedin} className={sidebarStyles.fontAwesome} size="3x" />
 
   return (
     <div>
