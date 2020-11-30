@@ -21,9 +21,9 @@ function Sidebar() {
       <h2>
         Hello. <br /> I'm Phoebe Voong-Fadel. I'm a front-end developer.
       </h2>
-      {twitterIcon}
-      {githubIcon}
-      {linkedinIcon}
+      <button class="btn" aria-label="Twitter link">{twitterIcon}</button>
+      <button class="btn" aria-label="Github link">{githubIcon}</button>
+      <button class="btn" aria-label="LinkedIn link">{linkedinIcon}</button>
     </div>
   )
 }
