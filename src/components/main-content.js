@@ -60,6 +60,9 @@ function MainContent() {
           I manage to bake a cake during my spare time.
         </p>
       </section>
+      <section id="wordpress-portfolio">
+        <h2>Freelance projects</h2>
+      </section>
     </main>
   )
 }
