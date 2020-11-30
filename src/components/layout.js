@@ -1,11 +1,13 @@
 import React from "react"
 import Sidebar from "./sidebar"
 import layoutStyles from "./layout.module.css"
+import MainContent from "./main-content"
 
 function Layout({children}) {
     return (
-        <div>
+        <div className={layoutStyles.container}>
             <Sidebar />
+        
             {children}
         </div>
     )

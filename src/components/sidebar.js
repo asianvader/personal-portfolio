@@ -38,7 +38,7 @@ function Sidebar() {
       <div className={sidebarStyles.imgPhoebe}>
         <img src={Phoebe} alt="Phoebe smiling" />
       </div>
-      <h2>
+      <h2 className={sidebarStyles.sidebarHeader}>
         Hello. <br /> I'm Phoebe Voong-Fadel. I'm a front-end developer.
       </h2>
       <div className={sidebarStyles.buttonContainer}>

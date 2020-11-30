@@ -1,3 +1,4 @@
-main {
-    margin-left: 35%;
+.container {
+    display: flex;
+    flex-direction: row;
 }
