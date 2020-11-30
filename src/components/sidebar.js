@@ -11,9 +11,9 @@ import "fontsource-roboto"
 import "fontsource-open-sans"
 
 function Sidebar() {
-  const twitterIcon = <FontAwesomeIcon icon={faTwitterSquare} />
-  const githubIcon = <FontAwesomeIcon icon={faGithubSquare} />
-  const linkedinIcon = <FontAwesomeIcon icon={faLinkedin} />
+  const twitterIcon = <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
+  const githubIcon = <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+  const linkedinIcon = <FontAwesomeIcon icon={faLinkedin} size="3x" />
 
   return (
     <div>
@@ -21,9 +21,33 @@ function Sidebar() {
       <h2>
         Hello. <br /> I'm Phoebe Voong-Fadel. I'm a front-end developer.
       </h2>
-      <button class="btn" aria-label="Twitter link">{twitterIcon}</button>
-      <button class="btn" aria-label="Github link">{githubIcon}</button>
-      <button class="btn" aria-label="LinkedIn link">{linkedinIcon}</button>
+      <button class="btn" aria-label="Twitter link">
+        <a
+          href="https://twitter.com/PhoebeVF"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {twitterIcon}
+        </a>
+      </button>
+      <button class="btn" aria-label="Github link">
+        <a
+          href="https://github.com/asianvader"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {githubIcon}
+        </a>
+      </button>
+      <button class="btn" aria-label="LinkedIn link">
+        <a
+          href="https://www.linkedin.com/in/phoebe-voong-fadel-36961234/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {linkedinIcon}
+        </a>
+      </button>
     </div>
   )
 }
