@@ -34,7 +34,7 @@ function Sidebar() {
   )
 
   return (
-    <div>
+    <div className={sidebarStyles.container}>
       <div className={sidebarStyles.imgPhoebe}>
         <img src={Phoebe} alt="Phoebe smiling" />
       </div>
