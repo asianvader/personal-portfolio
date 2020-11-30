@@ -3,19 +3,26 @@ img {
   border-radius: 50%;
 }
 
+.imgPhoebe {
+  text-align: right;
+  max-width: 90%;
+}
+
 body {
   font-family: "Open sans";
 }
 
 h2 {
   letter-spacing: 0.5px;
+  max-width: 90%;
+  text-align: right;
 }
 
 html {
   height: 100%;
   border-right: rgba(0, 0, 0, 0.76);
-  max-width: 20rem;
-  min-width: 20rem;
+  max-width: 35%;
+  min-width: 35%;
   -webkit-box-shadow: 2px 0px 6px 2px rgba(0, 0, 0, 0.56);
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.56);
 }
@@ -32,4 +39,9 @@ button {
 
 .fontAwesome:hover {
   opacity: 0.5;
+}
+
+.buttonContainer {
+  text-align: right;
+  max-width: 90%;
 }
