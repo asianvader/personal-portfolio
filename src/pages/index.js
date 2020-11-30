@@ -1,10 +1,14 @@
 import React from "react"
-import Sidebar from "../components/sidebar"
+import Layout from "../components/layout"
 
 export default function Home() {
   return (
     <div>
-      <Sidebar />
+      <Layout />
+
+      <main>
+        hello
+      </main>
     </div>
   )
 }
