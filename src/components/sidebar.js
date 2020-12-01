@@ -57,7 +57,7 @@ function Sidebar() {
         <p className={sidebarStyles.tagline}>Front-end developer | Writer | Mentor </p>
       
       <div className={sidebarStyles.buttonContainer}>
-        <button class="btn" aria-label="Twitter link">
+        <button className="btn" aria-label="Twitter link">
           <a
             href="https://twitter.com/PhoebeVF"
             rel="noopener noreferrer"
@@ -66,7 +66,7 @@ function Sidebar() {
             {twitterIcon}
           </a>
         </button>
-        <button class="btn" aria-label="Github link">
+        <button className="btn" aria-label="Github link">
           <a
             href="https://github.com/asianvader"
             rel="noopener noreferrer"
@@ -75,7 +75,7 @@ function Sidebar() {
             {githubIcon}
           </a>
         </button>
-        <button class="btn" aria-label="LinkedIn link">
+        <button className="btn" aria-label="LinkedIn link">
           <a
             href="https://www.linkedin.com/in/phoebe-voong-fadel-36961234/"
             rel="noopener noreferrer"
