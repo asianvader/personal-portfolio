@@ -5,10 +5,11 @@ import {
   faLinkedin,
   faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons"
-import Phoebe from "../images/phoebe.jpg"
 import sidebarStyles from "./sidebar.module.css"
 import "fontsource-roboto"
 import "fontsource-open-sans"
+import { graphql, useStaticQuery} from "gatsby"
+import Img from "gatsby-image"
 
 function Sidebar() {
   const twitterIcon = (
@@ -33,10 +34,23 @@ function Sidebar() {
     />
   )
 
+  const data = useStaticQuery(graphql`
+  query Images {
+    image: file(relativePath: {eq: "phoebe.jpg"}) {
+      id
+      childImageSharp {
+        fixed(width: 170) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+  `)
+
   return (
     <div className={sidebarStyles.container}>
       <div className={sidebarStyles.imgPhoebe}>
-        <img src={Phoebe} alt="Phoebe smiling" />
+        <Img fixed={data.image.childImageSharp.fixed} alt="Phoebe smiling" />
       </div>
       <h2 className={sidebarStyles.sidebarHeader}>
         Phoebe Voong-Fadel </h2>
