@@ -48,3 +48,10 @@ button {
   text-align: right;
   max-width: 90%;
 }
+
+.tagline {
+  font-size: 1.2rem;
+  max-width: 90%;
+  text-align: right;
+  font-weight: 600;
+}

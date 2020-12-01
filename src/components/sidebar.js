@@ -39,8 +39,9 @@ function Sidebar() {
         <img src={Phoebe} alt="Phoebe smiling" />
       </div>
       <h2 className={sidebarStyles.sidebarHeader}>
-        Hello. <br /> I'm Phoebe Voong-Fadel. I'm a front-end developer.
-      </h2>
+        Phoebe Voong-Fadel </h2>
+        <p className={sidebarStyles.tagline}>Front-end developer | Writer | Mentor </p>
+      
       <div className={sidebarStyles.buttonContainer}>
         <button class="btn" aria-label="Twitter link">
           <a
