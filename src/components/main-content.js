@@ -6,7 +6,7 @@ import BackgroundImage from "gatsby-background-image"
 const MainContent = () => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "bg-3.png" }) {
+      image: file(relativePath: { eq: "bg-5.png" }) {
         id
         childImageSharp {
           fluid(maxWidth: 1366) {
@@ -23,23 +23,27 @@ const MainContent = () => {
       className={mainContentStyles.bgImage}
     >
       <main>
-        <section id="introduction">
-          <h1>Hi, my name is Phoebe. </h1>
-          <p>
-            I'm a front-end developer and I build interactive maps for a living.
-            You've stumbled upon my internet home and if you want to learn more
-            about me, just keep on scrolling...
-          </p>
+        <section id="introduction" className={mainContentStyles.introduction}>
+          <div className={mainContentStyles.textContainer}>
+            <h1 className={mainContentStyles.introHeader}>
+              Hello, <span className={mainContentStyles.textPurple}>my name is Phoebe.</span>{" "}
+            </h1>
+            <p>
+              I'm a front-end developer and I build interactive maps for a
+              living. You've stumbled upon my internet home and if you want to
+              learn more about me, just keep on scrolling...
+            </p>
+          </div>
         </section>
 
         <section id="about">
+        <div className={mainContentStyles.textContainer}>
           <h2 className={mainContentStyles.aboutHeader}>About me</h2>
-
           <p>
             I was born and educated in the U.K. Before entering the world of web
             development, I worked for over a decade at various universities in
-            London. As a strong advocate of using technology and software to
-            automate repetitive administrative tasks, I decided to pursue a more
+            London. Throughout my career in Higher Education, I was a strong advocate of using technology and software to
+            automate repetitive administrative tasks. So I decided to pursue a more
             technical career.
           </p>
           <p>
@@ -63,7 +67,7 @@ const MainContent = () => {
             .{" "}
           </p>
           <p>
-            In my spare time, I also mentor early-career developers for{" "}
+            In my spare time, I mentor early-career developers for{" "}
             <a
               href="https://the-collab-lab.codes/"
               target="_blank"
@@ -76,11 +80,14 @@ const MainContent = () => {
           </p>
           <p>
             Aside from work, my two young children keep me occupied. But
-            sometimes I manage to bake a cake during my spare time.
+            sometimes I manage to bake a cake or two during my spare time.
           </p>
+          </div>
         </section>
         <section id="wordpress-portfolio">
+        <div className={mainContentStyles.textContainer}>
           <h2>Freelance projects</h2>
+          </div>
         </section>
       </main>
     </BackgroundImage>

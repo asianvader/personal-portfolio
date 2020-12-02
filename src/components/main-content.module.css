@@ -1,20 +1,58 @@
 main {
-    margin: 1rem;
-    color: white;
-    padding-left: 35%;
+  margin: 1rem;
+  color: white;
+  padding-left: 35%;
+}
+
+p {
+font-size: 1.3rem;
+line-height: 1.8;
+}
+
+a {
+    color: #c240b7;
+}
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 .aboutHeader {
-    font-size: 1.5rem;
+  font-size: 2rem;
+  color:#c240b7;
+}
+
+.introHeader {
+  font-size: 3rem;
+}
+
+.textContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .bgImage {
-    width: 100%;
-    background-position: right top;
-    background-repeat: repeat-y;
-    background-size: cover;
+  /* width: 100%; */
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
+.introduction {
+  padding-top:11rem;
+  height: 100vh
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  main {
+    padding-left: 0;
   }
-  
-  section {
-      padding-bottom: 10rem;
-  }
+}
+
+.textPurple {
+    color: #c240b7;
+}
