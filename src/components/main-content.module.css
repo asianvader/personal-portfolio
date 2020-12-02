@@ -1,7 +1,20 @@
 main {
     margin: 1rem;
+    color: white;
+    padding-left: 35%;
 }
 
 .aboutHeader {
     font-size: 1.5rem;
 }
+
+.bgImage {
+    width: 100%;
+    background-position: right top;
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
+  
+  section {
+      padding-bottom: 10rem;
+  }
