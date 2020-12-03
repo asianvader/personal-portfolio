@@ -1,6 +1,7 @@
 .wrapper {
   min-height: 237px;
   min-width: 36rem;
+  max-width: 40rem;
   background-color: black;
   color: white;
   border-radius: 5px;
@@ -9,6 +10,9 @@
   text-align: center;
   padding: 15px 15px 15px 15px;
   filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cardTitle {
@@ -46,6 +50,6 @@
 }
 
 .cardImage {
-    margin-right: 10px;
-    border-radius: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
 }

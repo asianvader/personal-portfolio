@@ -120,15 +120,13 @@ const MainContent = () => {
               Freelance projects
             </h2>
             <div className={mainContentStyles.portfolioCardWrapper}>
-              <div className={mainContentStyles.card}>
-                <PortfolioCard
+              <PortfolioCard
                 image={data.srilicious.childImageSharp.fixed}
                 title="Sri-Licious"
                 excerpt="A multi-page marketing website. I did a complete redesign of Sri-Licious' website to bring it line with their updated branding."
                 link="https://srilicious.co.uk/"
               />
-              </div>
-              
+
               <PortfolioCard
                 image={data.noahs.childImageSharp.fixed}
                 title="Noah's Nursery"
@@ -138,7 +136,7 @@ const MainContent = () => {
 
               <PortfolioCard
                 image={data.nashauna.childImageSharp.fixed}
-                title="Nashauna"
+                title="Nashauna Manboard"
                 excerpt="A single page marketing website for a life coach. The client wanted to stand out through a bold and colourful design."
                 link="https://nashaunamanboard.co.uk/"
               />
