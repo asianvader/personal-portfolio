@@ -10,8 +10,24 @@ const MainContent = () => {
       srilicious: file(relativePath: { eq: "srilicious.png" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      noahs: file(relativePath: { eq: "noahsnursery.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      nashauna: file(relativePath: { eq: "nashauna.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -103,12 +119,30 @@ const MainContent = () => {
             <h2 className={mainContentStyles.freelanceHeader}>
               Freelance projects
             </h2>
-            <PortfolioCard
-              image={data.srilicious.childImageSharp.fluid}
-              title="Sri-Licious"
-              excerpt="A multi-page marketing website. I did a complete redesign of Sri-Licious' website to bring it line with their updated branding."
-              link="https://srilicious.co.uk/"
-            />
+            <div className={mainContentStyles.portfolioCardWrapper}>
+              <div className={mainContentStyles.card}>
+                <PortfolioCard
+                image={data.srilicious.childImageSharp.fixed}
+                title="Sri-Licious"
+                excerpt="A multi-page marketing website. I did a complete redesign of Sri-Licious' website to bring it line with their updated branding."
+                link="https://srilicious.co.uk/"
+              />
+              </div>
+              
+              <PortfolioCard
+                image={data.noahs.childImageSharp.fixed}
+                title="Noah's Nursery"
+                excerpt="A multipage marketing website. I created a playful theme and design to compliment a children's nursery."
+                link="https://noahsnursery.co.uk/"
+              />
+
+              <PortfolioCard
+                image={data.nashauna.childImageSharp.fixed}
+                title="Nashauna"
+                excerpt="A single page marketing website for a life coach. The client wanted to stand out through a bold and colourful design."
+                link="https://nashaunamanboard.co.uk/"
+              />
+            </div>
           </div>
         </section>
       </main>

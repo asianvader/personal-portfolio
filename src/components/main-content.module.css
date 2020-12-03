@@ -1,7 +1,7 @@
 main {
   margin: 1rem;
   color: white;
-  padding-left: 35%;
+  padding-left: 30%;
 }
 
 p {
@@ -59,4 +59,8 @@ a:hover {
 
 .textPurple {
     color: #c240b7;
+}
+
+.card {
+  padding-bottom: 60px;
 }

@@ -5,7 +5,10 @@ import Img from "gatsby-image"
 function PortfolioCard({ title, excerpt, link, image, background }) {
   return (
       <div className={portfolioCardStyles.wrapper}>
-        <Img fluid={image} className={portfolioCardStyles.cardImage} />
+          <div className={portfolioCardStyles.imageWrapper}>
+               <Img fixed={image} className={portfolioCardStyles.cardImage} />
+          </div>
+        <div className={portfolioCardStyles.textWrapper}>
         <h3 className={portfolioCardStyles.cardTitle}>{title}</h3>
         <p className={portfolioCardStyles.cardExcerpt}>{excerpt}</p>
         <button role="link" className={portfolioCardStyles.cardButton}>
@@ -13,6 +16,7 @@ function PortfolioCard({ title, excerpt, link, image, background }) {
             Live Site
           </a>
         </button>
+        </div>
       </div>
   )
 }
