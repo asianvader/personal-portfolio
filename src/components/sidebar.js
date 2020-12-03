@@ -49,8 +49,8 @@ function Sidebar() {
 
   return (
     <div className={sidebarStyles.container}>
-      <div className={sidebarStyles.imgPhoebe}>
-        <Img fixed={data.image.childImageSharp.fixed} alt="Phoebe smiling" />
+      <div className={sidebarStyles.imgPhoebeWrapper}>
+        <Img className={sidebarStyles.imgPhoebe} fixed={data.image.childImageSharp.fixed} alt="Phoebe smiling" />
       </div>
       <h2 className={sidebarStyles.sidebarHeader}>
         Phoebe Voong-Fadel </h2>

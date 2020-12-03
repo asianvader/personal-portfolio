@@ -30,6 +30,11 @@ a:hover {
   font-size: 3rem;
 }
 
+.freelanceHeader {
+  font-size: 2rem;
+  color:#c240b7;
+}
+
 .textContainer {
   margin-left: auto;
   margin-right: auto;

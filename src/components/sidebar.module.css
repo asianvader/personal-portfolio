@@ -1,8 +1,8 @@
-img {
+.imgPhoebe {
   border-radius: 50%; 
 }
 
-.imgPhoebe {
+.imgPhoebeWrapper {
   padding-top: 20%;
   margin-right: 1rem;
   text-align: right;

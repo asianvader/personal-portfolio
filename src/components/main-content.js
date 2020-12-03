@@ -2,10 +2,21 @@ import React from "react"
 import mainContentStyles from "./main-content.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import PortfolioCard from "./portfolio-card"
+
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
     query {
+      srilicious: file(relativePath: { eq: "srilicious.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
       image: file(relativePath: { eq: "bg-5.png" }) {
         id
         childImageSharp {
@@ -86,7 +97,13 @@ const MainContent = () => {
         </section>
         <section id="wordpress-portfolio">
         <div className={mainContentStyles.textContainer}>
-          <h2>Freelance projects</h2>
+          <h2 className={mainContentStyles.freelanceHeader}>Freelance projects</h2>
+          <PortfolioCard
+            image={data.srilicious.childImageSharp.fixed}
+            title="Sri-Licious"
+            excerpt="A local food business wanted a complete redesign of their website"
+            link="https://srilicious.co.uk/"
+          />
           </div>
         </section>
       </main>
