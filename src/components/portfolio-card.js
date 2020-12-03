@@ -5,10 +5,10 @@ import Img from "gatsby-image"
 function PortfolioCard({ title, excerpt, link, image }) {
   return (
     <div className={portfolioCardStyles.wrapper}>
-        <Img fixed={image} />
-      <h3>{title}</h3>
-      <p>{excerpt}</p>
-      <button role="link">
+        <Img fluid={image} className={portfolioCardStyles.cardImage} />
+      <h3 className={portfolioCardStyles.cardTitle}>{title}</h3>
+      <p className={portfolioCardStyles.cardExcerpt}>{excerpt}</p>
+      <button role="link" className={portfolioCardStyles.cardButton}>
         <a href={link} rel="noopener noreferrer" target="_blank">
           Live Site
         </a>

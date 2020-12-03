@@ -11,8 +11,8 @@ const MainContent = () => {
       srilicious: file(relativePath: { eq: "srilicious.png" }) {
         id
         childImageSharp {
-          fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -99,7 +99,7 @@ const MainContent = () => {
         <div className={mainContentStyles.textContainer}>
           <h2 className={mainContentStyles.freelanceHeader}>Freelance projects</h2>
           <PortfolioCard
-            image={data.srilicious.childImageSharp.fixed}
+            image={data.srilicious.childImageSharp.fluid}
             title="Sri-Licious"
             excerpt="A local food business wanted a complete redesign of their website"
             link="https://srilicious.co.uk/"
