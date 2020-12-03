@@ -42,7 +42,6 @@ a:hover {
 }
 
 .bgImage {
-  /* width: 100%; */
   background-position: right top;
   background-repeat: repeat-y;
 }
