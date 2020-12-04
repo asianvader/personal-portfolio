@@ -5,6 +5,7 @@ import BackgroundImage from "gatsby-background-image"
 import PortfolioCard from "./portfolio-card"
 import "fontsource-roboto"
 import Skills from "./skills"
+import Footer from "./footer"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`

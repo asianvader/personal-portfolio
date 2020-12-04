@@ -6,6 +6,7 @@ main {
   margin: 1rem;
   color: white;
   padding-left: 30%;
+  padding-bottom: 40px;
 }
 
 p {
@@ -109,12 +110,15 @@ a:hover {
     font-size: 1.1rem;
   }
 
-
   .textContainer {
     width: 96%;
   }
 
   .introduction {
     padding-top: 3rem;
+  }
+
+  footer {
+    display: block;
   }
 }
