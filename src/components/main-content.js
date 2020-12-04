@@ -6,6 +6,7 @@ import PortfolioCard from "./portfolio-card"
 import "fontsource-roboto"
 import Skills from "./skills"
 import Footer from "./footer"
+import ProjectCard from "./project-card"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -40,6 +41,14 @@ const MainContent = () => {
         childImageSharp {
           fluid(maxWidth: 1366) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      calculator: file(relativePath: { eq: "calculator.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -125,6 +134,7 @@ const MainContent = () => {
             <h2 className={mainContentStyles.freelanceHeader}>
               Freelance projects
             </h2>
+            <p>A sample of some of my freelance projects below.</p>
             <div className={mainContentStyles.portfolioCardWrapper}>
               <PortfolioCard
                 image={data.srilicious.childImageSharp.fixed}
@@ -149,6 +159,19 @@ const MainContent = () => {
             </div>
           </div>
         </section>
+
+        <section id="fun-projects" className={mainContentStyles.funProjects}>
+          <div className={mainContentStyles.textContainer}>
+            <h2 className={mainContentStyles.funHeader}>Fun Projects</h2>
+          </div>
+          <ProjectCard 
+            image={data.calculator.childImageSharp.fixed}
+            title="Calculator"
+            excerpt="A calculator built with React."
+            link="https://codepen.io/asianvader/full/XyxNgO"
+          />
+        </section>
+        
         <section id="skills" className={mainContentStyles.skills}>
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.skillsHeader}>Technical Skills</h2>
@@ -165,9 +188,7 @@ const MainContent = () => {
               for more details.
             </p>
           </div>
-          <div>
-            <Skills />
-          </div>
+          <Skills />
         </section>
       </main>
       <Footer />

@@ -39,7 +39,6 @@ a:hover {
 .freelanceHeader {
   font-size: 2rem;
   color: #c240b7;
-  padding-bottom: 2rem;
 }
 
 .textContainer {
@@ -74,6 +73,7 @@ a:hover {
   font-size: 2rem;
   color: #c240b7;
 }
+
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px */
