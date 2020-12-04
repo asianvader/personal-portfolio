@@ -203,44 +203,49 @@ const MainContent = () => {
         <section id="fun-projects" className={mainContentStyles.funProjects}>
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.funHeader}>Fun Projects</h2>
+            <p>I've selected a few of my side projects below.</p>
           </div>
           <div className={mainContentStyles.projectWrapper}>
-            <ProjectCard
-              image={data.calculator.childImageSharp.fixed}
-              title="Calculator"
-              excerpt="A calculator built with React."
-              link="https://codepen.io/asianvader/full/XyxNgO"
-            />
-            <ProjectCard
-              image={data.drummachine.childImageSharp.fixed}
-              title="Drum Machine"
-              excerpt="A drum machine built with React."
-              link="https://codepen.io/asianvader/full/XxagqL"
-            />
-            <ProjectCard
-              image={data.pomodoro.childImageSharp.fixed}
-              title="Pomodoro Clock"
-              excerpt="A pomodoro clock built with React."
-              link="https://codepen.io/asianvader/full/madeyw"
-            />
-            <ProjectCard
-              image={data.choropleth.childImageSharp.fixed}
-              title="Choropleth Map"
-              excerpt="A choropleth map created using the D3.js library."
-              link="https://codepen.io/asianvader/full/yWbNrB"
-            />
-            <ProjectCard
-              image={data.treemap.childImageSharp.fixed}
-              title="Tree Map"
-              excerpt="A tree map created using the D3.js library."
-              link="https://codepen.io/asianvader/full/zQmXmd"
-            />
-            <ProjectCard
-              image={data.exercise.childImageSharp.fixed}
-              title="Exercise Tracker"
-              excerpt="A full stack app using JavaScript, Node.js and MongoDB."
-              link="https://phoebe-fcc-api-exercise-tracker.glitch.me/"
-            />
+            <div>
+              <ProjectCard
+                image={data.calculator.childImageSharp.fixed}
+                title="Calculator"
+                excerpt="A calculator built with React."
+                link="https://codepen.io/asianvader/full/XyxNgO"
+              />
+              <ProjectCard
+                image={data.drummachine.childImageSharp.fixed}
+                title="Drum Machine"
+                excerpt="A drum machine built with React."
+                link="https://codepen.io/asianvader/full/XxagqL"
+              />
+              <ProjectCard
+                image={data.pomodoro.childImageSharp.fixed}
+                title="Pomodoro Clock"
+                excerpt="A pomodoro clock built with React."
+                link="https://codepen.io/asianvader/full/madeyw"
+              />
+            </div>
+            <div>
+              <ProjectCard
+                image={data.choropleth.childImageSharp.fixed}
+                title="Choropleth Map"
+                excerpt="A choropleth map created using the D3.js library."
+                link="https://codepen.io/asianvader/full/yWbNrB"
+              />
+              <ProjectCard
+                image={data.treemap.childImageSharp.fixed}
+                title="Tree Map"
+                excerpt="A tree map created using the D3.js library."
+                link="https://codepen.io/asianvader/full/zQmXmd"
+              />
+              <ProjectCard
+                image={data.exercise.childImageSharp.fixed}
+                title="Exercise Tracker"
+                excerpt="A full stack app using JavaScript, Node.js and MongoDB."
+                link="https://phoebe-fcc-api-exercise-tracker.glitch.me/"
+              />
+            </div>
           </div>
         </section>
 

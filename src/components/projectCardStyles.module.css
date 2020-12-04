@@ -2,6 +2,7 @@
     position: relative;
     width: 250px;
     filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0));
+    margin-bottom: 2rem;
 }
 
 .cardImage {
