@@ -34,7 +34,7 @@ const MainContent = () => {
         }
       }
 
-      image: file(relativePath: { eq: "bg-5.png" }) {
+      image: file(relativePath: { eq: "bg-6.png" }) {
         id
         childImageSharp {
           fluid(maxWidth: 1366) {
