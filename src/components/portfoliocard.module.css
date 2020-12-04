@@ -53,3 +53,14 @@
   margin-right: 10px;
   border-radius: 5px;
 }
+
+/* MEDIA QUERIES */
+/* most mobiles portrait */
+@media (min-width: 320px) and (max-width: 480px) {
+  .wrapper {
+    min-height: 237px;
+    min-width: 18rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

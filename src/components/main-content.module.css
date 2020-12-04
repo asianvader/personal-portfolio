@@ -52,12 +52,28 @@ a:hover {
   height: 100vh
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+.textPurple {
+    color: #c240b7;
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 850px) {
   main {
     padding-left: 0;
   }
 }
 
-.textPurple {
-    color: #c240b7;
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  main {
+    padding-left: 0;
+  }
+
+  .textContainer {
+    width: 96%;
+  }
 }
