@@ -72,4 +72,8 @@ a:hover {
   main {
     padding-left: 0;
   }
+
+  .textContainer {
+    width: 96%;
+  }
 }
