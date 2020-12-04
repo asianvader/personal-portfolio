@@ -126,7 +126,7 @@ const MainContent = () => {
               universities in London. Throughout my career in Higher Education,
               I was a strong advocate of using technology and software to
               automate repetitive administrative tasks. So I decided to pursue a
-              more technical career.
+              more technical career. I'm currently working full-time as a Front-end Developer specialising in WebGIS.
             </p>
             <p>
               Apart from my passion for learning the latest frontend
