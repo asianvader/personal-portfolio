@@ -68,6 +68,14 @@ a:hover {
     width: auto !important;
     overflow-x: hidden !important;  
   }
+  
+  p {
+    font-size: 1.1rem;
+  }
+
+  .introduction {
+    padding-top: 2rem;
+  }
 }
 
 /* 
@@ -79,7 +87,16 @@ a:hover {
     padding-left: 0;
   }
 
+  p {
+    font-size: 1.1rem;
+  }
+
+
   .textContainer {
     width: 96%;
+  }
+
+  .introduction {
+    padding-top: 3rem;
   }
 }

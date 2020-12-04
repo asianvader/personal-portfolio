@@ -68,7 +68,7 @@ const MainContent = () => {
         <section id="about">
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.aboutHeader}>About me</h2>
-            <p>
+            <p className={mainContentStyles.paragraph}>
               I was born and educated in the U.K. Before entering the world of
               web development, I worked for over a decade at various
               universities in London. Throughout my career in Higher Education,
