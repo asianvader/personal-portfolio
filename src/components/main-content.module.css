@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto";
+}
+
 main {
   margin: 1rem;
   color: white;
@@ -34,6 +38,7 @@ a:hover {
 .freelanceHeader {
   font-size: 2rem;
   color: #c240b7;
+  padding-bottom: 2rem;
 }
 
 .textContainer {
@@ -53,6 +58,19 @@ a:hover {
 }
 
 .textPurple {
+  color: #c240b7;
+}
+
+.about {
+  padding-bottom: 3rem;
+}
+
+.wpPortfolio {
+  padding-bottom: 3rem;
+}
+
+.skillsHeader {
+  font-size: 2rem;
   color: #c240b7;
 }
 

@@ -3,6 +3,8 @@ import mainContentStyles from "./main-content.module.css"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import PortfolioCard from "./portfolio-card"
+import "fontsource-roboto"
+import Skills from "./skills"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -65,7 +67,7 @@ const MainContent = () => {
           </div>
         </section>
 
-        <section id="about">
+        <section id="about" className={mainContentStyles.about}>
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.aboutHeader}>About me</h2>
             <p className={mainContentStyles.paragraph}>
@@ -114,7 +116,10 @@ const MainContent = () => {
             </p>
           </div>
         </section>
-        <section id="wordpress-portfolio">
+        <section
+          id="wordpress-portfolio"
+          className={mainContentStyles.wpPortfolio}
+        >
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.freelanceHeader}>
               Freelance projects
@@ -141,6 +146,26 @@ const MainContent = () => {
                 link="https://nashaunamanboard.co.uk/"
               />
             </div>
+          </div>
+        </section>
+        <section id="skills" className={mainContentStyles.skills}>
+          <div className={mainContentStyles.textContainer}>
+            <h2 className={mainContentStyles.skillsHeader}>Technical Skills</h2>
+            <p>
+              Here are a few technologies I have worked with recently. Please
+              checkout my{" "}
+              <a
+                href="https://www.linkedin.com/in/phoebe-voong-fadel-36961234/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn profile
+              </a>{" "}
+              for more details.
+            </p>
+          </div>
+          <div>
+            <Skills />
           </div>
         </section>
       </main>
