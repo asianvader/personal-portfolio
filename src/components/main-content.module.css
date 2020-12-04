@@ -1,30 +1,35 @@
+body {
+  font-family: "Roboto";
+}
+
 main {
   margin: 1rem;
   color: white;
   padding-left: 30%;
+  padding-bottom: 40px;
 }
 
 p {
-font-size: 1.3rem;
-line-height: 1.8;
+  font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 a {
-    color: #c240b7;
+  color: #c240b7;
 }
 
 a:link {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .aboutHeader {
   font-size: 2rem;
-  color:#c240b7;
+  color: #c240b7;
 }
 
 .introHeader {
@@ -33,7 +38,8 @@ a:hover {
 
 .freelanceHeader {
   font-size: 2rem;
-  color:#c240b7;
+  color: #c240b7;
+  padding-bottom: 2rem;
 }
 
 .textContainer {
@@ -48,12 +54,25 @@ a:hover {
 }
 
 .introduction {
-  padding-top:11rem;
-  height: 100vh
+  padding-top: 11rem;
+  height: 100vh;
 }
 
 .textPurple {
-    color: #c240b7;
+  color: #c240b7;
+}
+
+.about {
+  padding-bottom: 3rem;
+}
+
+.wpPortfolio {
+  padding-bottom: 3rem;
+}
+
+.skillsHeader {
+  font-size: 2rem;
+  color: #c240b7;
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -61,6 +80,20 @@ a:hover {
 @media (min-width: 481px) and (max-width: 850px) {
   main {
     padding-left: 0;
+    width: 100%;
+  }
+  html,
+  body {
+    width: auto !important;
+    overflow-x: hidden !important;  
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+
+  .introduction {
+    padding-top: 2rem;
   }
 }
 
@@ -73,7 +106,19 @@ a:hover {
     padding-left: 0;
   }
 
+  p {
+    font-size: 1.1rem;
+  }
+
   .textContainer {
     width: 96%;
+  }
+
+  .introduction {
+    padding-top: 3rem;
+  }
+
+  footer {
+    display: block;
   }
 }
