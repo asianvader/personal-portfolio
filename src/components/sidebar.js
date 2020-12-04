@@ -86,7 +86,7 @@ function Sidebar() {
         </button>
       </div>
       <div className={sidebarStyles.footer}>
-        <p>© 2020 Designed and Built by Phoebe Voong-Fadel</p>
+        <p>© 2020 Built by me with ❤️ and Gatsby.js</p>
       </div>
     </div>
   )

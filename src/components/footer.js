@@ -5,7 +5,7 @@ import footerStyles from "./footer.modules.css"
 function Footer() {
     return (
         <footer>
-        <p>© 2020 Designed and Built by Phoebe Voong-Fadel</p>
+        <p>© 2020 Built by me with ❤️ and Gatsby.js</p>
       </footer>
     )
 }
