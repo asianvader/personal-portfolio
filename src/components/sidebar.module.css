@@ -59,6 +59,20 @@ button {
   font-weight: 600;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+    bottom: 0;
+    width: 30%;
+    color: rgb(173, 173, 173);
+    text-align: center;
+    height: 40px;
+}
+
+.footer > p {
+  font-size: 0.8rem;    
+}
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px */
 @media (min-width: 481px) and (max-width: 850px) {
