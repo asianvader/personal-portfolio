@@ -85,7 +85,9 @@ function Sidebar() {
           </a>
         </button>
       </div>
-
+      <div className={sidebarStyles.footer}>
+        <p>© 2020 Designed and Built by Phoebe Voong-Fadel</p>
+      </div>
     </div>
   )
 }
