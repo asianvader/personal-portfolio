@@ -170,6 +170,7 @@ const MainContent = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </BackgroundImage>
   )
 }
