@@ -5,26 +5,26 @@ main {
 }
 
 p {
-font-size: 1.3rem;
-line-height: 1.8;
+  font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 a {
-    color: #c240b7;
+  color: #c240b7;
 }
 
 a:link {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .aboutHeader {
   font-size: 2rem;
-  color:#c240b7;
+  color: #c240b7;
 }
 
 .introHeader {
@@ -33,7 +33,7 @@ a:hover {
 
 .freelanceHeader {
   font-size: 2rem;
-  color:#c240b7;
+  color: #c240b7;
 }
 
 .textContainer {
@@ -48,12 +48,12 @@ a:hover {
 }
 
 .introduction {
-  padding-top:11rem;
-  height: 100vh
+  padding-top: 11rem;
+  height: 100vh;
 }
 
 .textPurple {
-    color: #c240b7;
+  color: #c240b7;
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -61,6 +61,12 @@ a:hover {
 @media (min-width: 481px) and (max-width: 850px) {
   main {
     padding-left: 0;
+    width: 100%;
+  }
+  html,
+  body {
+    width: auto !important;
+    overflow-x: hidden !important;  
   }
 }
 
