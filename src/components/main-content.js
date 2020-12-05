@@ -9,6 +9,7 @@ import Footer from "./footer"
 import ProjectCard from "./project-card"
 import Button from "./button"
 import Social from "./social-media"
+import Img from "gatsby-image"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -94,6 +95,14 @@ const MainContent = () => {
           }
         }
       }
+      phoebe: file(relativePath: { eq: "phoebe.jpg" }) {
+        id
+        childImageSharp {
+          fixed(width: 170) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -111,6 +120,13 @@ const MainContent = () => {
                 my name is Phoebe.
               </span>{" "}
             </h1>
+            <div className={mainContentStyles.imgPhoebeWrapper}>
+              <Img
+                className={mainContentStyles.imgPhoebe}
+                fixed={data.phoebe.childImageSharp.fixed}
+                alt="Phoebe smiling"
+              />
+            </div>
             <p>
               I'm a front-end developer and I build interactive maps for a
               living. You've stumbled upon my internet home and if you want to
@@ -276,8 +292,8 @@ const MainContent = () => {
             <h2 className={mainContentStyles.contactHeader}>Get In Touch</h2>
             <p>
               If you would like to say hello or would like to know more about my
-              experience, please drop me email. I will try my best to get back
-              to you.
+              experience, please drop me an email. I will try my best to get
+              back to you.
             </p>
             <Button
               text="Email me"
