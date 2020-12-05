@@ -7,6 +7,8 @@ import "fontsource-roboto"
 import Skills from "./skills"
 import Footer from "./footer"
 import ProjectCard from "./project-card"
+import Button from "./button"
+import Social from "./social-media"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -126,7 +128,8 @@ const MainContent = () => {
               universities in London. Throughout my career in Higher Education,
               I was a strong advocate of using technology and software to
               automate repetitive administrative tasks. So I decided to pursue a
-              more technical career. I'm currently working full-time as a Front-end Developer specialising in WebGIS.
+              more technical career. I'm currently working full-time as a
+              Front-end Developer specialising in WebGIS.
             </p>
             <p>
               Apart from my passion for learning the latest frontend
@@ -267,6 +270,24 @@ const MainContent = () => {
           </div>
           <Skills />
         </section>
+
+        <section id="contact" className={mainContentStyles.contact}>
+          <div className={mainContentStyles.textContainer}>
+            <h2 className={mainContentStyles.contactHeader}>Get In Touch</h2>
+            <p>
+              If you would like to say hello or would like to know more about my
+              experience, please drop me email. I will try my best to get back
+              to you.
+            </p>
+            <Button
+              text="Email me"
+              link={"mailto:thecodinghamster@gmail.com"}
+            />
+          </div>
+        </section>
+        <div className={mainContentStyles.socialMedia}>
+          <Social />
+        </div>
       </main>
       <Footer />
     </BackgroundImage>

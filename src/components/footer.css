@@ -23,3 +23,11 @@ footer {
     display: block;
   }
 }
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 850px */
+@media (min-width: 481px) and (max-width: 850px) {
+  footer {
+    display: block;
+  }
+}

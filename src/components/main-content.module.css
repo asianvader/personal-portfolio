@@ -70,7 +70,8 @@ a:hover {
 }
 
 .skillsHeader,
-.funHeader {
+.funHeader,
+.contactHeader {
   font-size: 2rem;
   color: #c240b7;
 }
@@ -83,8 +84,31 @@ a:hover {
   justify-content: space-around;
 }
 
+.contact {
+  height: 50vh;
+  padding-top: 10rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+.skills {
+  padding-top: 3rem;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.socialMedia {
+  display: none;
+}
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
-##Screen = B/w 481px to 767px */
+##Screen = B/w 481px to 850px */
 @media (min-width: 481px) and (max-width: 850px) {
   main {
     padding-left: 0;
@@ -102,6 +126,20 @@ a:hover {
 
   .introduction {
     padding-top: 2rem;
+  }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .contact {
+    height: 50vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .textContainer > p {
+    font-size: 1.1rem;
   }
 }
 
@@ -126,12 +164,17 @@ a:hover {
     padding-top: 3rem;
   }
 
-  footer {
-    display: block;
-  }
-
   .projectWrapper {
     display: flex;
     flex-direction: column;
+  }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .contact {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
   }
 }

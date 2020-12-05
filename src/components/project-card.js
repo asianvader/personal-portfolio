@@ -1,5 +1,5 @@
 import React from "react"
-import projectCardStyles from "./projectCardStyles.module.css"
+import projectCardStyles from "./project-card.module.css"
 import Img from "gatsby-image"
 
 function ProjectCard({ title, excerpt, link, image }) {
