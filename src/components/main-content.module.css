@@ -70,7 +70,8 @@ a:hover {
 }
 
 .skillsHeader,
-.funHeader, .contactHeader {
+.funHeader,
+.contactHeader {
   font-size: 2rem;
   color: #c240b7;
 }
@@ -137,10 +138,9 @@ button {
     padding-bottom: 4rem;
   }
 
-  .textContainer > p{
+  .textContainer > p {
     font-size: 1.1rem;
   }
-
 }
 
 /* 

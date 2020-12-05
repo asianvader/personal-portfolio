@@ -285,10 +285,9 @@ const MainContent = () => {
             />
           </div>
         </section>
-        <div className={mainContentStyles.socialMedia} >
-                  <Social />
+        <div className={mainContentStyles.socialMedia}>
+          <Social />
         </div>
-
       </main>
       <Footer />
     </BackgroundImage>
