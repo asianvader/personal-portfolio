@@ -86,7 +86,7 @@ function Sidebar() {
         </button>
       </div>
       <div className={sidebarStyles.footer}>
-        <p>© 2020 Built by me with ❤️ and Gatsby.js</p>
+        <p>© 2020 Built by me with <span role="img" aria-label="love">❤️ </span>and Gatsby.js</p>
       </div>
     </div>
   )

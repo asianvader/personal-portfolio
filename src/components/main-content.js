@@ -6,6 +6,7 @@ import PortfolioCard from "./portfolio-card"
 import "fontsource-roboto"
 import Skills from "./skills"
 import Footer from "./footer"
+import ProjectCard from "./project-card"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -43,6 +44,54 @@ const MainContent = () => {
           }
         }
       }
+      calculator: file(relativePath: { eq: "calculator.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      drummachine: file(relativePath: { eq: "drummachine.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      choropleth: file(relativePath: { eq: "choropleth.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      exercise: file(relativePath: { eq: "exercise.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      pomodoro: file(relativePath: { eq: "pomodoro.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      treemap: file(relativePath: { eq: "treemap.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -77,7 +126,7 @@ const MainContent = () => {
               universities in London. Throughout my career in Higher Education,
               I was a strong advocate of using technology and software to
               automate repetitive administrative tasks. So I decided to pursue a
-              more technical career.
+              more technical career. I'm currently working full-time as a Front-end Developer specialising in WebGIS.
             </p>
             <p>
               Apart from my passion for learning the latest frontend
@@ -125,6 +174,7 @@ const MainContent = () => {
             <h2 className={mainContentStyles.freelanceHeader}>
               Freelance projects
             </h2>
+            <p>A sample of some of my freelance projects below.</p>
             <div className={mainContentStyles.portfolioCardWrapper}>
               <PortfolioCard
                 image={data.srilicious.childImageSharp.fixed}
@@ -149,6 +199,56 @@ const MainContent = () => {
             </div>
           </div>
         </section>
+
+        <section id="fun-projects" className={mainContentStyles.funProjects}>
+          <div className={mainContentStyles.textContainer}>
+            <h2 className={mainContentStyles.funHeader}>Fun Projects</h2>
+            <p>I've selected a few of my side projects below.</p>
+          </div>
+          <div className={mainContentStyles.projectWrapper}>
+            <div>
+              <ProjectCard
+                image={data.calculator.childImageSharp.fixed}
+                title="Calculator"
+                excerpt="A calculator built with React."
+                link="https://codepen.io/asianvader/full/XyxNgO"
+              />
+              <ProjectCard
+                image={data.drummachine.childImageSharp.fixed}
+                title="Drum Machine"
+                excerpt="A drum machine built with React."
+                link="https://codepen.io/asianvader/full/XxagqL"
+              />
+              <ProjectCard
+                image={data.pomodoro.childImageSharp.fixed}
+                title="Pomodoro Clock"
+                excerpt="A pomodoro clock built with React."
+                link="https://codepen.io/asianvader/full/madeyw"
+              />
+            </div>
+            <div>
+              <ProjectCard
+                image={data.choropleth.childImageSharp.fixed}
+                title="Choropleth Map"
+                excerpt="A choropleth map created using the D3.js library."
+                link="https://codepen.io/asianvader/full/yWbNrB"
+              />
+              <ProjectCard
+                image={data.treemap.childImageSharp.fixed}
+                title="Tree Map"
+                excerpt="A tree map created using the D3.js library."
+                link="https://codepen.io/asianvader/full/zQmXmd"
+              />
+              <ProjectCard
+                image={data.exercise.childImageSharp.fixed}
+                title="Exercise Tracker"
+                excerpt="A full stack app using JavaScript, Node.js and MongoDB."
+                link="https://phoebe-fcc-api-exercise-tracker.glitch.me/"
+              />
+            </div>
+          </div>
+        </section>
+
         <section id="skills" className={mainContentStyles.skills}>
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.skillsHeader}>Technical Skills</h2>
@@ -165,9 +265,7 @@ const MainContent = () => {
               for more details.
             </p>
           </div>
-          <div>
-            <Skills />
-          </div>
+          <Skills />
         </section>
       </main>
       <Footer />

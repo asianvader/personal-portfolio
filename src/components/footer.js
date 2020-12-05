@@ -1,11 +1,11 @@
 import React from "react";
-import footerStyles from "./footer.modules.css"
+import "./footer.css"
 
 
 function Footer() {
     return (
         <footer>
-        <p>© 2020 Built by me with ❤️ and Gatsby.js</p>
+        <p>© 2020 Built by me with <span role="img" aria-label="love">❤️ </span>and Gatsby.js</p>
       </footer>
     )
 }
