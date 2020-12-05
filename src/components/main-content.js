@@ -7,6 +7,7 @@ import "fontsource-roboto"
 import Skills from "./skills"
 import Footer from "./footer"
 import ProjectCard from "./project-card"
+import Button from "./button"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -266,6 +267,17 @@ const MainContent = () => {
             </p>
           </div>
           <Skills />
+        </section>
+
+        <section id="contact" className={mainContentStyles.contact}>
+          <div className={mainContentStyles.textContainer}>
+            <h2 className={mainContentStyles.contact}>Get In Touch</h2>
+            <p>
+             If you would like to say hello or would like to know more about my experience, please drop me email. I will try my best to get back to you.
+            </p>
+                      <Button text="Email me" link={"mailto:thecodinghamster@gmail.com"} />
+          </div>
+
         </section>
       </main>
       <Footer />
