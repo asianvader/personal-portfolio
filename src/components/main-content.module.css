@@ -107,6 +107,16 @@ button {
   display: none;
 }
 
+.imgPhoebe {
+  border-radius: 50%;
+}
+
+.imgPhoebeWrapper {
+  text-align: left;
+  max-width: 90%;
+  display: none;
+}
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 850px */
 @media (min-width: 481px) and (max-width: 850px) {
@@ -140,6 +150,18 @@ button {
 
   .textContainer > p {
     font-size: 1.1rem;
+  }
+
+  .imgPhoebeWrapper {
+    display: block;
+  }
+
+  .introHeader {
+    font-size: 2rem;
+    
+  }
+  .introduction {
+    padding-bottom: 5rem;
   }
 }
 
@@ -176,5 +198,12 @@ button {
   .contact {
     padding-top: 10rem;
     padding-bottom: 3rem;
+  }
+  .imgPhoebeWrapper {
+    display: block;
+  }
+
+  .introHeader {
+    font-size: 2rem;
   }
 }
