@@ -8,6 +8,7 @@ import Skills from "./skills"
 import Footer from "./footer"
 import ProjectCard from "./project-card"
 import Button from "./button"
+import Social from "./social-media"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -284,6 +285,10 @@ const MainContent = () => {
             />
           </div>
         </section>
+        <div className={mainContentStyles.socialMedia} >
+                  <Social />
+        </div>
+
       </main>
       <Footer />
     </BackgroundImage>

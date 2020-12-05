@@ -102,8 +102,12 @@ button {
   cursor: pointer;
 }
 
+.socialMedia {
+  display: none;
+}
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
-##Screen = B/w 481px to 767px */
+##Screen = B/w 481px to 850px */
 @media (min-width: 481px) and (max-width: 850px) {
   main {
     padding-left: 0;
@@ -122,6 +126,21 @@ button {
   .introduction {
     padding-top: 2rem;
   }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .contact {
+    height: 50vh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .textContainer > p{
+    font-size: 1.1rem;
+  }
+
 }
 
 /* 
@@ -145,12 +164,17 @@ button {
     padding-top: 3rem;
   }
 
-  footer {
-    display: block;
-  }
-
   .projectWrapper {
     display: flex;
     flex-direction: column;
+  }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .contact {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
   }
 }
