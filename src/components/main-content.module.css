@@ -92,6 +92,16 @@ a:hover {
   text-align: center;
 }
 
+.skills {
+  padding-top: 3rem;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px */
 @media (min-width: 481px) and (max-width: 850px) {

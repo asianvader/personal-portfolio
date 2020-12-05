@@ -1,0 +1,16 @@
+.icon {
+  padding: 10px;
+}
+
+.fontAwesome {
+  color: rgb(224, 223, 223);
+}
+
+.fontAwesome:hover {
+  opacity: 0.5;
+}
+
+.buttonContainer {
+  text-align: right;
+  max-width: 90%;
+}
