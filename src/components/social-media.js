@@ -4,6 +4,7 @@ import {
   faGithubSquare,
   faLinkedin,
   faTwitterSquare,
+  faCodepen,
 } from "@fortawesome/free-brands-svg-icons"
 import socialStyles from "./social.module.css"
 
@@ -29,8 +30,24 @@ export default function SocialButtons() {
       size="3x"
     />
   )
+  const codepenIcon = (
+    <FontAwesomeIcon
+      icon={faCodepen}
+      className={socialStyles.fontAwesome}
+      size="3x"
+    />
+  )
   return (
     <div className={socialStyles.buttonContainer}>
+      <a
+        className={socialStyles.icon}
+        href="https://www.linkedin.com/in/phoebe-voong-fadel-36961234/"
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label="LinkedIn link"
+      >
+        {linkedinIcon}
+      </a>
       <a
         className={socialStyles.icon}
         href="https://twitter.com/PhoebeVF"
@@ -49,14 +66,15 @@ export default function SocialButtons() {
       >
         {githubIcon}
       </a>
+
       <a
         className={socialStyles.icon}
-        href="https://www.linkedin.com/in/phoebe-voong-fadel-36961234/"
+        href="https://codepen.io/asianvader"
         rel="noopener noreferrer"
         target="_blank"
-        aria-label="LinkedIn link"
+        aria-label="Codepen link"
       >
-        {linkedinIcon}
+        {codepenIcon}
       </a>
     </div>
   )
