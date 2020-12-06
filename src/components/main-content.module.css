@@ -27,84 +27,24 @@ a:hover {
   opacity: 0.5;
 }
 
+/* About section */
 .aboutHeader {
   font-size: 2rem;
   color: #c240b7;
 }
 
+.about {
+  padding-bottom: 10rem;
+}
+
+/* Main heading */
 .introHeader {
   font-size: 3rem;
-}
-
-.freelanceHeader {
-  font-size: 2rem;
-  color: #c240b7;
-}
-
-.textContainer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-.bgImage {
-  background-position: right top;
-  background-repeat: repeat-y;
 }
 
 .introduction {
   padding-top: 11rem;
   height: 100vh;
-}
-
-.textPurple {
-  color: #c240b7;
-}
-
-.about {
-  padding-bottom: 3rem;
-}
-
-.wpPortfolio {
-  padding-bottom: 3rem;
-}
-
-.skillsHeader,
-.funHeader,
-.contactHeader {
-  font-size: 2rem;
-  color: #c240b7;
-}
-
-.projectWrapper {
-  display: flex;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
-}
-
-.contact {
-  height: 50vh;
-  padding-top: 10rem;
-}
-
-.contact {
-  text-align: center;
-}
-
-.skills {
-  padding-top: 3rem;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.socialMedia {
-  display: none;
 }
 
 .imgPhoebe {
@@ -117,6 +57,77 @@ button {
   display: none;
 }
 
+/* Freelance section */
+.wpPortfolio {
+  padding-bottom: 10rem;
+}
+
+.portfolioCardWrapper{
+  padding-top: 2rem;
+}
+
+/* Fun projects */
+.funProjects {
+  padding-bottom: 10rem;
+}
+
+.projectWrapper {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+/* Skills section */
+.skills {
+  padding-bottom: 10rem;
+}
+
+/* Contact section */
+.contact {
+  height: 50vh;
+  padding-top: 10rem;
+}
+
+
+.skillsHeader,
+.funHeader,
+.contactHeader, .freelanceHeader {
+  font-size: 2rem;
+  color: #c240b7;
+}
+
+/* General */
+.textContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.bgImage {
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
+.textPurple {
+  color: #c240b7;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.socialMedia {
+  display: none;
+}
+
+/* Animations */
+
+/* Media queries */
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 850px */
 @media (min-width: 481px) and (max-width: 850px) {

@@ -21,11 +21,21 @@ li > p {
 
 li {
   list-style-type: none;
+  display: flex;
 }
 
 ul {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+
+.iconwrapper {
+  min-width: 30px;
+}
+
+.logoText {
+  margin-top: 0;
 }
 
 @media (min-width: 0) and (max-width: 480px) {
