@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 import "./menu.css"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCode } from '@fortawesome/free-solid-svg-icons'
 function Navbar() {
   const [opennav, setOpennav] = useState(false)
+
+  const codeIcon = <FontAwesomeIcon icon={faCode} className="fontawesom" size="2x" />
 
   function navbarOnClickHandler(e) {
     e.preventDefault()
@@ -14,8 +17,7 @@ function Navbar() {
     <header id="navbar" className={opennav ? "opened" : ""}>
       <nav className="navbar-container container">
         <a href="/" className="home-link">
-          <div className="navbar-logo"></div>
-          Website Name
+          <div className="navbar-logo">{codeIcon}</div>
         </a>
         <button
           type="button"
