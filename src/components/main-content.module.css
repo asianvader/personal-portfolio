@@ -34,7 +34,7 @@ a:hover {
 }
 
 .about {
-  padding-bottom: 3rem;
+  padding-bottom: 10rem;
 }
 
 /* Main heading */
@@ -59,7 +59,7 @@ a:hover {
 
 /* Freelance section */
 .wpPortfolio {
-  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .portfolioCardWrapper{
@@ -68,7 +68,7 @@ a:hover {
 
 /* Fun projects */
 .funProjects {
-  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .projectWrapper {
@@ -82,7 +82,7 @@ a:hover {
 
 /* Skills section */
 .skills {
-  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 /* Contact section */
@@ -124,6 +124,8 @@ button {
 .socialMedia {
   display: none;
 }
+
+/* Animations */
 
 /* Media queries */
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
