@@ -27,37 +27,9 @@ a:hover {
   opacity: 0.5;
 }
 
+/* About section */
 .aboutHeader {
   font-size: 2rem;
-  color: #c240b7;
-}
-
-.introHeader {
-  font-size: 3rem;
-}
-
-.freelanceHeader {
-  font-size: 2rem;
-  color: #c240b7;
-}
-
-.textContainer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-.bgImage {
-  background-position: right top;
-  background-repeat: repeat-y;
-}
-
-.introduction {
-  padding-top: 11rem;
-  height: 100vh;
-}
-
-.textPurple {
   color: #c240b7;
 }
 
@@ -65,42 +37,14 @@ a:hover {
   padding-bottom: 3rem;
 }
 
-.wpPortfolio {
-  padding-bottom: 3rem;
+/* Main heading */
+.introHeader {
+  font-size: 3rem;
 }
 
-.skillsHeader,
-.funHeader,
-.contactHeader {
-  font-size: 2rem;
-  color: #c240b7;
-}
-
-.projectWrapper {
-  display: flex;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
-}
-
-.contact {
-  height: 50vh;
-  padding-top: 10rem;
-}
-
-.skills {
-  padding-top: 3rem;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.socialMedia {
-  display: none;
+.introduction {
+  padding-top: 11rem;
+  height: 100vh;
 }
 
 .imgPhoebe {
@@ -113,6 +57,66 @@ button {
   display: none;
 }
 
+/* Freelance section */
+.wpPortfolio {
+  padding-bottom: 3rem;
+}
+
+/* Fun projects */
+.projectWrapper {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+/* Skills section */
+.skills {
+  padding-top: 3rem;
+}
+
+/* Contact section */
+.contact {
+  height: 50vh;
+  padding-top: 10rem;
+}
+
+
+.skillsHeader,
+.funHeader,
+.contactHeader, .freelanceHeader {
+  font-size: 2rem;
+  color: #c240b7;
+}
+
+/* General */
+.textContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.bgImage {
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
+.textPurple {
+  color: #c240b7;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.socialMedia {
+  display: none;
+}
+
+/* Media queries */
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 850px */
 @media (min-width: 481px) and (max-width: 850px) {
