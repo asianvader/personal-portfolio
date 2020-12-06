@@ -1,14 +1,21 @@
 import React, { useState } from "react"
 import "./menu.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faCode } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 function Navbar() {
   const [opennav, setOpennav] = useState(false)
 
-  const codeIcon = <FontAwesomeIcon icon={faCode} className="fontawesome" title="Go to home page" size="2x" />
+  const codeIcon = (
+    <FontAwesomeIcon
+      icon={faCode}
+      className="fontawesome"
+      title="Go to home page"
+      size="2x"
+    />
+  )
 
   function navbarOnClickHandler(e) {
     e.preventDefault()
@@ -19,7 +26,7 @@ function Navbar() {
   return (
     <header id="navbar" className={opennav ? "opened" : ""}>
       <nav className="navbar-container container">
-        <Link href="/" className="home-link">
+        <Link to="/" className="home-link">
           <div className="navbar-logo">{codeIcon}</div>
         </Link>
         <button
@@ -35,29 +42,29 @@ function Navbar() {
         <div className="navbar-menu">
           <ul className="navbar-links">
             <li className="navbar-item">
-              <a className="navbar-link" href="#about">
+              <AnchorLink className="navbar-link" to="/#about">
                 About
-              </a>
+              </AnchorLink>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="#wordpress-portfolio">
+              <AnchorLink className="navbar-link" to="/#wordpress-portfolio">
                 Freelance
-              </a>
+              </AnchorLink>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="#fun-projects">
+              <AnchorLink className="navbar-link" to="/#fun-projects">
                 Projects
-              </a>
+              </AnchorLink>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="#skills">
+              <AnchorLink className="navbar-link" to="/#skills">
                 Skills
-              </a>
+              </AnchorLink>
             </li>
             <li className="navbar-item">
-              <a className="navbar-link" href="#contact">
+              <AnchorLink className="navbar-link" to="/#contact">
                 Contact
-              </a>
+              </AnchorLink>
             </li>
           </ul>
         </div>
