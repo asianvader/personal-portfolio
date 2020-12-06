@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .button {
   background-color: #7c2075;
@@ -10,4 +10,5 @@
   cursor: pointer;
   color: white;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }

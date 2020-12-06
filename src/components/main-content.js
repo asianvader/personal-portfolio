@@ -147,7 +147,7 @@ const MainContent = () => {
               I was a strong advocate of using technology and software to
               automate repetitive administrative tasks. So I decided to pursue a
               more technical career. I'm currently working full-time as a
-              Front-end Developer specialising in WebGIS.
+              front-end developer specialising in WebGIS.
             </p>
             <p>
               Apart from my passion for learning the latest frontend
@@ -293,7 +293,7 @@ const MainContent = () => {
           <div className={mainContentStyles.textContainer}>
             <h2 className={mainContentStyles.contactHeader}>Get In Touch</h2>
             <p>
-              If you would like to say hello or would like to know more about my
+              If you want to say hello or would like to know more about my
               experience, please drop me an email. I will try my best to get
               back to you.
             </p>
