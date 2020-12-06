@@ -28,7 +28,7 @@ ul {
   margin-bottom: 0;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 0) and (max-width: 480px) {
   .wrapper {
     display: flex;
     flex-direction: column;

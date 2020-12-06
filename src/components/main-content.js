@@ -10,6 +10,7 @@ import ProjectCard from "./project-card"
 import Button from "./button"
 import Social from "./social-media"
 import Img from "gatsby-image"
+import Navbar from "./menu"
 
 const MainContent = () => {
   const data = useStaticQuery(graphql`
@@ -111,6 +112,7 @@ const MainContent = () => {
       fluid={data.image.childImageSharp.fluid}
       className={mainContentStyles.bgImage}
     >
+      <Navbar />
       <main>
         <section id="introduction" className={mainContentStyles.introduction}>
           <div className={mainContentStyles.textContainer}>
