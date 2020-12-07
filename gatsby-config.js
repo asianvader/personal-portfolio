@@ -1,5 +1,9 @@
 const path = require(`path`)
 
+require ("dotenv").config({
+  path: `env`,
+})
+
 module.exports = {
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -19,5 +23,6 @@ module.exports = {
         offset: -100
       }
     }
+    
   ],
 }
