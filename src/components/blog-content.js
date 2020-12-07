@@ -17,8 +17,29 @@ export default function BlogContent() {
           }
         }
       }
+      articles: allContentfulArticles(
+        sort: { fields: datePublished, order: DESC }
+      ) {
+        totalCount
+        edges {
+          node {
+            excerpt {
+              id
+              excerpt
+            }
+            title
+            url
+            datePublished(formatString: "MMMM, D YYYY")
+          }
+        }
+      }
     }
   `)
+
+  const articles = data.articles.edges
+  console.log(articles)
+
+  console.log(data.articles)
   return (
     <BackgroundImage
       fluid={data.image.childImageSharp.fluid}
@@ -31,9 +52,18 @@ export default function BlogContent() {
             <h1 className={blogStyles.blogHeader}>
               Welcome to my blogs and articles page
             </h1>
-            <p>
-              Please see a list of all my blog articles to date.
-            </p>
+            <p>Please see a list of all my blog articles to date.</p>
+            {articles.map(({ node }) => (
+              <div key={node.excerpt.id}>
+                <h3>
+                  <a href={node.url} rel="noopener noreferrer" target="_blank">
+                    {node.title}
+                  </a>{" "}
+                  - <span>{node.datePublished}</span>
+                </h3>
+                <p>{node.excerpt.excerpt}</p>
+              </div>
+            ))}
           </div>
         </section>
 
