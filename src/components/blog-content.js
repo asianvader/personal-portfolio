@@ -47,7 +47,7 @@ export default function BlogContent() {
     >
       <Navbar />
       <main>
-        <section id="blog-intro" className={blogStyles.blogIntro}>
+        <section id="blog-intro" className={blogStyles.blogSection}>
           <div className={blogStyles.textContainer}>
             <h1 className={blogStyles.blogHeader}>
               Welcome to my blogs and articles page

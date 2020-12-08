@@ -10,10 +10,6 @@ main {
     background-repeat: repeat-y;
   }
 
-  .blogIntro {
-    padding-top: 10rem;
-  }
-
   .blogHeader {
     font-size: 2rem;
     color: #c240b7;
@@ -23,11 +19,12 @@ main {
     padding-bottom: 1rem;
   }
 
-  .blogIntro {
+  .blogSection {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 10rem;
+    padding-bottom: 10rem;    
+    padding-top: 10rem;
   }
 
   .excerpt {
@@ -68,6 +65,10 @@ main {
     display: block;
   }
 
+  .blogSection {  
+    padding-top: 3rem;
+  }
+
 }
 
 /* 
@@ -83,12 +84,16 @@ main {
     font-size: 1.1rem;
   }
 
-  .textContainer {
+  .blogSection {
     width: 96%;
   }
 
   .socialMedia {
     display: block;
+  }
+
+  .blogSection {  
+    padding-top: 4rem;
   }
 
 }
