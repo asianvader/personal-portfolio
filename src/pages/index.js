@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import MainContent from "../components/main-content"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
 import useSiteMetadata from "../components/useSiteMetadata"
 
 export default function Home() {
