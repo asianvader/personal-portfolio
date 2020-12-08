@@ -3,7 +3,7 @@ import "./menu.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCode } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 function Navbar() {
   const [opennav, setOpennav] = useState(false)
@@ -41,7 +41,7 @@ function Navbar() {
         </button>
         <div className="navbar-menu">
           <ul className="navbar-links">
-          <li className="navbar-item">
+            <li className="navbar-item">
               <Link className="navbar-link" to="/">
                 Home
               </Link>
@@ -67,10 +67,10 @@ function Navbar() {
               </AnchorLink>
             </li>
             <li className="navbar-item">
-            <Link to="/blog" className="navbar-link">
-          Blog
-        </Link>
-            </li >
+              <Link to="/blog" className="navbar-link">
+                Articles
+              </Link>
+            </li>
             <li className="navbar-item">
               <AnchorLink className="navbar-link" to="/#contact">
                 Contact
