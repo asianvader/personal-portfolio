@@ -13,6 +13,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Phoebe Voong-Fadel`,
+    description: `Portfolio of Phoebe Voong-Fadel`
   },
   plugins: [
     `gatsby-plugin-fontawesome-css`,
