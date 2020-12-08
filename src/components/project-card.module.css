@@ -32,6 +32,7 @@
   
 .cardButton {
     background-color: #7c2075;
+    font-family: "Roboto";
     padding: 10px 25px;
     border-radius: 10px;
     align-self: center;

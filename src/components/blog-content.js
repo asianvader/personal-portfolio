@@ -50,9 +50,12 @@ export default function BlogContent() {
         <section id="blog-intro" className={blogStyles.blogSection}>
           <div className={blogStyles.textContainer}>
             <h1 className={blogStyles.blogHeader}>
-              Welcome to my blogs and articles page
+              Welcome to my articles page
             </h1>
-            <p>Please see a list of all my blogs and articles to date.</p>
+            <p>
+              Please see below a collated list of all my blogs and articles to
+              date.
+            </p>
           </div>
           {articles.map(({ node }) => (
             <div key={node.excerpt.id} className={blogStyles.articlesWrapper}>
