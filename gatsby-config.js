@@ -1,5 +1,15 @@
 const path = require(`path`)
 
+const dotenv = require('dotenv')
+
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
+
+require("dotenv").config({
+  path: `env`,
+})
+
 module.exports = {
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -16,8 +26,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -100
-      }
-    }
+        offset: -100,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN
+      },
+    },
   ],
 }

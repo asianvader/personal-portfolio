@@ -41,6 +41,11 @@ function Navbar() {
         </button>
         <div className="navbar-menu">
           <ul className="navbar-links">
+          <li className="navbar-item">
+              <Link className="navbar-link" to="/">
+                Home
+              </Link>
+            </li>
             <li className="navbar-item">
               <AnchorLink className="navbar-link" to="/#about">
                 About
@@ -61,6 +66,11 @@ function Navbar() {
                 Skills
               </AnchorLink>
             </li>
+            <li className="navbar-item">
+            <Link to="/blog" className="navbar-link">
+          Blog
+        </Link>
+            </li >
             <li className="navbar-item">
               <AnchorLink className="navbar-link" to="/#contact">
                 Contact

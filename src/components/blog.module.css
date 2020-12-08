@@ -1,0 +1,99 @@
+main {
+    margin: 1rem;
+    color: white;
+    padding-left: 30%;
+    padding-bottom: 40px;
+  }
+
+  .bgImage {
+    background-position: right top;
+    background-repeat: repeat-y;
+  }
+
+  .blogHeader {
+    font-size: 2rem;
+    color: #c240b7;
+  }
+
+  .articlesWrapper{
+    padding-bottom: 1rem;
+  }
+
+  .blogSection {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10rem;    
+    padding-top: 10rem;
+  }
+
+  .excerpt {
+    font-size: 1.1rem;
+  }
+
+  .socialMedia {
+    display: none;
+  }
+
+  .textContainer{
+    padding-bottom: 2rem;
+  }
+
+  .articleHeading{
+    font-style: italic;
+  }
+  
+  /* Media queries */
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 850px */
+@media (min-width: 481px) and (max-width: 850px) {
+  main {
+    padding-left: 0;
+    width: 100%;
+  }
+  html,
+  body {
+    width: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .blogSection {  
+    padding-top: 3rem;
+  }
+
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 0) and (max-width: 480px) {
+  main {
+    padding-left: 0;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .blogSection {
+    width: 96%;
+  }
+
+  .socialMedia {
+    display: block;
+  }
+
+  .blogSection {  
+    padding-top: 4rem;
+  }
+
+}
