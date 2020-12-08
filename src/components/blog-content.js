@@ -52,22 +52,23 @@ export default function BlogContent() {
             <h1 className={blogStyles.blogHeader}>
               Welcome to my blogs and articles page
             </h1>
-            <p>Please see a list of all my blog articles to date.</p>
-            {articles.map(({ node }) => (
-              <div key={node.excerpt.id}>
-                <h3>
-                  <a href={node.url} rel="noopener noreferrer" target="_blank">
-                    {node.title}
-                  </a>{" "}
-                  - <span>{node.datePublished}</span>
-                </h3>
-                <p>{node.excerpt.excerpt}</p>
-              </div>
-            ))}
+            <p>Please see a list of all my blogs and articles to date.</p>
           </div>
+          {articles.map(({ node }) => (
+            <div key={node.excerpt.id} className={blogStyles.articlesWrapper}>
+              <h3 className={blogStyles.articleHeading}>
+                <a href={node.url} rel="noopener noreferrer" target="_blank">
+                  {node.title}
+                </a>{" "}
+                - <span>{node.datePublished}</span>
+              </h3>
+              <p className={blogStyles.excerpt}>{node.excerpt.excerpt}</p>
+            </div>
+          ))}
         </section>
-
-        <Social />
+        <div className={blogStyles.socialMedia}>
+          <Social />
+        </div>
       </main>
       <Footer />
     </BackgroundImage>
