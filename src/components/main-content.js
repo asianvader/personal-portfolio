@@ -159,13 +159,13 @@ const MainContent = () => {
               >
                 freeCodeCamp.org
               </a>
-              . You can read my articles{" "}
+              . You can read {" "}
               <a
                 href="https://www.freecodecamp.org/news/author/phoebe"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                here
+                my articles on freeCodeCamp here
               </a>
               .{" "}
             </p>
