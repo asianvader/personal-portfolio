@@ -294,8 +294,8 @@ const MainContent = () => {
             <h2 className={mainContentStyles.contactHeader}>Get In Touch</h2>
             <p>
               If you want to say hello or would like to know more about my
-              experience, please drop me an email. I will try my best to get
-              back to you.
+              experience, please drop me an email. I will get
+              back to you as soon as possible.
             </p>
             <Button
               text="Email me"
