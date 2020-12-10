@@ -1,3 +1,7 @@
+:root {
+  --header-text: #ad23a2;
+}
+
 .imgPhoebe {
   border-radius: 50%;
 }
@@ -19,7 +23,7 @@ body {
   letter-spacing: 0.5px;
   max-width: 90%;
   text-align: right;
-  color: #7c2075;
+  color: var(--header-text);
   font-weight: bolder;
 }
 
