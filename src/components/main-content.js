@@ -130,8 +130,7 @@ const MainContent = () => {
               />
             </div>
             <p>
-              I'm a front-end developer and I build interactive maps for a
-              living. You've stumbled upon my internet home and if you want to
+              I'm a front-end developer. You've stumbled upon my internet home and if you want to
               learn more about me, just keep on scrolling...
             </p>
           </div>
@@ -147,7 +146,7 @@ const MainContent = () => {
               I was a strong advocate of using technology and software to
               automate repetitive administrative tasks. So I decided to pursue a
               more technical career. I'm currently working full-time as a
-              front-end developer specialising in WebGIS.
+              front-end developer at the National Foundation for Educational Research (NFER).
             </p>
             <p>
               Apart from my passion for learning the latest frontend

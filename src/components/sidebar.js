@@ -37,7 +37,7 @@ function Sidebar() {
 
       <div className={sidebarStyles.footer}>
         <p>
-          © 2020 Built by me with{" "}
+          © 2022 Built by me with{" "}
           <span role="img" aria-label="love">
             ❤️{" "}
           </span>
