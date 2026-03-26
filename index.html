@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoebe Voong-Fadel — AI & ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0f0f0e;
+    --gray-dark: #3a3a38;
+    --gray-mid: #7a7a76;
+    --gray-light: #d4d4ce;
+    --gray-pale: #f4f4f0;
+    --white: #fafaf8;
+    --accent: #1d6b50;
+    --accent-light: #e8f2ee;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--gray-dark);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--gray-mid);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--black); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 3rem 5rem;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-left {}
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--gray-dark);
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--gray-dark); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--black); }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--gray-light);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-stat {
+    background: var(--white);
+    padding: 1.5rem;
+  }
+
+  .hero-stat-num {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .hero-stat-label {
+    font-size: 12px;
+    color: var(--gray-mid);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  .currently-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-family: var(--mono);
+    font-weight: 400;
+    padding: 0.5rem 0.85rem;
+    border-radius: 2px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* DIVIDER */
+  .section-divider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    border-top: 1px solid var(--gray-light);
+  }
+
+  /* SKILLS */
+  .skills-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 3rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gray-mid);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--black);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gray-light);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .skill-group {
+    background: var(--white);
+    padding: 2rem;
+  }
+
+  .skill-group-title {
+    font-size: 11px;
+    font-family: var(--mono);
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray-dark);
+    background: var(--gray-pale);
+    padding: 0.3rem 0.65rem;
+    border-radius: 2px;
+    border: 1px solid var(--gray-light);
+  }
+
+  /* PROJECTS */
+  .projects-section {
+    background: var(--gray-pale);
+    padding: 6rem 0;
+  }
+
+  .projects-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .project-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: var(--black);
+    transform: translateY(-2px);
+  }
+
+  .project-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .project-type {
+    font-size: 10px;
+    font-family: var(--mono);
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--accent-light);
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+  }
+
+  .project-arrow {
+    font-size: 18px;
+    color: var(--gray-light);
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .project-card:hover .project-arrow {
+    color: var(--black);
+    transform: translate(2px, -2px);
+  }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.2;
+  }
+
+  .project-desc {
+    font-size: 14px;
+    color: var(--gray-mid);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: auto;
+  }
+
+  .tech-tag {
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--gray-mid);
+    border: 1px solid var(--gray-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-left h2 { margin-bottom: 1rem; }
+
+  .contact-desc {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: 400px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--black);
+    background: var(--gray-pale);
+  }
+
+  .contact-link-icon {
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-pale);
+    border-radius: 4px;
+    color: var(--gray-dark);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .contact-link-text {
+    flex: 1;
+  }
+
+  .contact-link-label {
+    font-size: 11px;
+    color: var(--gray-mid);
+    font-family: var(--mono);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  .contact-right {
+    padding-top: 1rem;
+  }
+
+  .cambridge-badge {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: var(--accent-light);
+    border-radius: 4px;
+    border: 1px solid rgba(29, 107, 80, 0.15);
+    margin-bottom: 1.5rem;
+  }
+
+  .cambridge-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+
+  .cambridge-text h3 {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .cambridge-text p {
+    font-size: 13px;
+    color: var(--gray-dark);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .availability-note {
+    font-size: 13px;
+    color: var(--gray-mid);
+    font-weight: 300;
+    line-height: 1.65;
+    border-top: 1px solid var(--gray-light);
+    padding-top: 1.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--gray-light);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--gray-mid);
+    font-family: var(--mono);
+    font-weight: 300;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left > * {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-eyebrow { animation-delay: 0.1s; }
+  h1 { animation-delay: 0.2s; }
+  .hero-desc { animation-delay: 0.3s; }
+  .hero-cta { animation-delay: 0.4s; }
+  .hero-right { animation: fadeUp 0.6s 0.35s ease both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 2.5rem; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .contact-section { grid-template-columns: 1fr; gap: 2.5rem; }
+    .skills-section, .projects-inner { padding: 4rem 1.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+
+  @media (max-width: 560px) {
+    .nav-links { display: none; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .hero-stat-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">phoebe voong-fadel</a>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">AI & ML Engineer</div>
+    <h1>Software engineer<br>building <em>applied</em><br>AI products.</h1>
+    <p class="hero-desc">
+      Software engineer with 7+ years of product experience, now focused on applied ML, NLP, and LLM systems. Currently completing the University of Cambridge Data Science &amp; AI programme.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View projects →</a>
+      <a href="/cdn-cgi/l/email-protection#ea9a82858f888fc49c8585848daa8d878b8386c4898587" class="btn-secondary">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="hero-stat-num">7+</div>
+        <div class="hero-stat-label">years building products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">ML/AI projects shipped</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">150k</div>
+        <div class="hero-stat-label">article views on freeCodeCamp</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">2026</div>
+        <div class="hero-stat-label">Cambridge AI capstone</div>
+      </div>
+    </div>
+    <div class="currently-tag">
+      <span class="dot"></span>
+      Currently: Advanced NLP · Cambridge
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+  <div class="section-header">
+    <span class="section-label">02 — Skills</span>
+    <h2>What I work with</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">AI / ML</div>
+      <div class="skill-tags">
+        <span class="skill-tag">LLM applications</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Supervised learning</span>
+        <span class="skill-tag">Anomaly detection</span>
+        <span class="skill-tag">Clustering</span>
+        <span class="skill-tag">Neural networks</span>
+        <span class="skill-tag">Prompt engineering</span>
+        <span class="skill-tag">Model evaluation</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Frameworks & Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">OpenAI API</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">pandas / NumPy</span>
+        <span class="skill-tag">Jupyter</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Engineering</div>
+      <div class="skill-tags">
+        <span class="skill-tag">JavaScript / TypeScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Next.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">API integration</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Testing</span>
+        <span class="skill-tag">Accessibility</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROJECTS -->
+<section class="projects-section" id="projects">
+  <div class="projects-inner">
+    <div class="section-header">
+      <span class="section-label">03 — Projects</span>
+      <h2>Selected work</h2>
+    </div>
+    <div class="projects-grid">
+
+      <a class="project-card" href="https://github.com/asianvader/ml-wikitutor-rag" target="_blank" rel="noopener">
+        <div class="project-card-top">
+          <span class="project-type">RAG · NLP</span>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div class="project-title">ML WikiTutor — RAG Prototype</div>
+        <p class="project-desc">End-to-end retrieval-augmented generation system over a curated ML/AI knowledge base of 2,747 chunks and ~1.07M tokens, with source previews and refusal behaviour to reduce hallucination.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI</span>
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">Vector DB</span>
+          <span class="tech-tag">Streamlit</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/asianvader/student_dropout_prediction" target="_blank" rel="noopener">
+        <div class="project-card-top">
+          <span class="project-type">Supervised Learning</span>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div class="project-title">Student Dropout Prediction</div>
+        <p class="project-desc">Multi-stage supervised learning workflow predicting dropout risk across three stages of the student journey, framed around practical intervention timing and business-facing recommendations.</p>
+        <div class="project-tech">
+          <span class="tech-tag">XGBoost</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">Keras Tuner</span>
+          <span class="tech-tag">ROC-AUC</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/asianvader/cam-ds-course-1-project-1" target="_blank" rel="noopener">
+        <div class="project-card-top">
+          <span class="project-type">Anomaly Detection</span>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div class="project-title">Ship Engine Anomaly Detection</div>
+        <p class="project-desc">Unsupervised anomaly detection for ship engine sensor data in a predictive-maintenance context, comparing IQR, One-Class SVM, and Isolation Forest with PCA for visual analysis.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Isolation Forest</span>
+          <span class="tech-tag">One-Class SVM</span>
+          <span class="tech-tag">PCA</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://github.com/asianvader/cam-ds-course-1-project-2" target="_blank" rel="noopener">
+        <div class="project-card-top">
+          <span class="project-type">Clustering · Analytics</span>
+          <span class="project-arrow">↗</span>
+        </div>
+        <div class="project-title">Customer Segmentation</div>
+        <p class="project-desc">Transaction-level clustering workflow with feature engineering, K-means, PCA, and t-SNE. Five-cluster solution selected via silhouette analysis, translated into actionable business recommendations.</p>
+        <div class="project-tech">
+          <span class="tech-tag">K-means</span>
+          <span class="tech-tag">t-SNE</span>
+          <span class="tech-tag">PCA</span>
+          <span class="tech-tag">pandas</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-left">
+    <div class="section-header" style="margin-bottom: 1rem;">
+      <span class="section-label">04 — Contact</span>
+      <h2>Let's talk</h2>
+    </div>
+    <p class="contact-desc">
+      Open to AI engineering internships and roles focused on turning real-world data into reliable automation and decision-support tools.
+    </p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:thecodinghamster@gmail.com">
+        <div class="contact-link-icon">@</div>
+        <div class="contact-link-text">
+          <span class="contact-link-label">Email</span>
+          thecodinghamster@gmail.com
+        </div>
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/phoebe-voong-fadel" target="_blank" rel="noopener">
+        <div class="contact-link-icon">in</div>
+        <div class="contact-link-text">
+          <span class="contact-link-label">LinkedIn</span>
+          phoebe-voong-fadel
+        </div>
+      </a>
+      <a class="contact-link" href="https://github.com/asianvader" target="_blank" rel="noopener">
+        <div class="contact-link-icon">gh</div>
+        <div class="contact-link-text">
+          <span class="contact-link-label">GitHub</span>
+          github.com/asianvader
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <div class="cambridge-badge">
+      <div class="cambridge-icon">🎓</div>
+      <div class="cambridge-text">
+        <h3>University of Cambridge</h3>
+        <p>Data Science with Machine Learning & AI Career Accelerator — currently in advanced NLP module, employer-led capstone due July 2026.</p>
+      </div>
+    </div>
+    <p class="availability-note">
+      Based in Reading, UK — open to roles in London, remote, or hybrid. Available for internships and junior AI engineering positions from mid-2026.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-text">Phoebe Voong-Fadel · AI & ML Engineer</span>
+  <span class="footer-text">Reading, UK</span>
+</footer>
+
+</body>
+</html>
